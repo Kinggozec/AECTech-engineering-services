@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AECtech Engineering Services</title>
-  <style>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+  /* CSS for the entire page */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -102,12 +105,169 @@
         flex-direction: column;
         align-items: center;
       }
-    }
-  </style>
+    } /* Closing the @media block */
+/* Bootstrap and GLightbox CSS are external dependencies and should be included in the HTML file, not in the CSS file. */
+
+/* Custom Zoom Effect */
+.project-img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+  .project-img:hover {
+    transform: scale(1.05);
+  }
+  .project-img:active {
+    transform: scale(0.95);
+  }
+  .project-img:focus {
+    outline: none; /* Add a rule or remove this block if unnecessary */
+  }
+
+  .contact-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+        .contact-buttons a {
+            background-color: #25D366; /* WhatsApp color */
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .contact-buttons a:hover {
+            background-color: #128C7E; /* Darker WhatsApp color */
+        }
+        .contact-buttons a img {
+            width: 40px;
+            height: 40px;
+        }
+        .email-btn {
+            background-color: #007BFF; /* Email color */
+        }
+        .email-btn:hover {
+            background-color: #0056b3; /* Darker Email color */
+        }
+        .email-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .email-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .whatsapp-btn img, .email-btn img {
+            transition: filter 0.3s;
+        }
+        .whatsapp-btn img:hover, .email-btn img:hover {
+            filter: brightness(0) invert(1);
+        }
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+        /* Closing duplicate media query */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav ul li a {
+                font-size: 12px;
+            }
+            main {
+                padding: 15px;
+            }
+            section h2 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-buttons {
+                bottom: 5px;
+                right: 5px;
+            }
+            .contact-buttons a {
+                padding: 6px;
+            }
+            .contact-buttons a img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }.contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-buttons a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons a img:hover {
+  transform: scale(1.1);
+}
+</style>
 </head>
 
 <body>
-
+       <!-- Floating Contact Buttons -->
+       <div class="contact-buttons">
+        <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+          <img loading="lazy" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp contact icon" />
+        </a>
+        <a href="mailto:kinggozec1@gmail.com" target="_blank" class="email-btn" title="Send Email">
+          <img loading="lazy" src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000/gmail--v1.png" alt="Email contact icon" />
+        </a>
+      </div>
 <header>
   <h1>AECtech Engineering Services</h1>
   <nav>
@@ -115,6 +275,13 @@
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="careers.html">Careers</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
   </nav>
 </header>
 
@@ -146,6 +313,6 @@
 <footer>
   &copy; 2025 AECtech Engineering Services. All rights reserved.
 </footer>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>
