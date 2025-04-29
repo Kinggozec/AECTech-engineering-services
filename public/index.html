@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AECtech Engineering Services provides structural design, construction, consultancy, and project management services.">
-  <meta name="keywords" content="AECtech, Civil Engineering, Structural Design, Construction, Project Management, Consultancy">
-  <meta name="author" content="AECtech Engineering Services">
-  <meta property="og:title" content="AECtech Engineering Services">
-  <meta property="og:description" content="Leading civil engineering company specializing in structural design, construction, and consultancy services.">
-  <meta property="og:image" content="path-to-image.jpg">
-  <meta property="og:url" content="https://www.aectech.com">
   <title>AECtech Engineering Services</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
+      background-color: #f5f5f5; /* Light background */
     }
     header {
-      background-color: #6a0dad; /* Deep Purple */
+      background-color: #6a0dad;
       color: white;
       padding: 20px;
       text-align: center;
@@ -27,6 +20,7 @@
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 10px;
     }
     nav a {
@@ -39,86 +33,115 @@
     nav a:hover {
       color: #9b30ff;
     }
-    section {
-      padding: 40px;
+    .hero {
+      background: linear-gradient(rgba(106,13,173,0.7), rgba(106,13,173,0.7)), url('https://images.unsplash.com/photo-1581090700227-1e8a63d7ef45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .hero button {
+      background-color: #9b30ff;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .hero button:hover {
+      background-color: #7b1fa2;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+    .feature-card {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
+    .feature-card h3 {
+      margin-bottom: 10px;
+      color: #6a0dad;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: #555;
+    }
     footer {
-      background-color: #6a0dad; /* Deep Purple */
+      background-color: #6a0dad;
       color: white;
       text-align: center;
       padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-    button {
-      background-color: #9b30ff; /* Medium Purple for button */
-      color: white;
-      border: none;
-      padding: 10px 20px;
       margin-top: 20px;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
     }
-    button:hover {
-      background-color: #7b1fa2; /* Darker Purple on hover */
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li a {
-      color: #6a0dad; /* Purple link color */
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Media Queries for responsiveness */
     @media (max-width: 768px) {
-      header {
-        padding: 10px;
+      nav {
+        flex-direction: column;
       }
-      section {
-        padding: 20px;
+      .hero h2 {
+        font-size: 32px;
       }
-      button {
-        padding: 8px 16px;
+      .features {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Welcome to AECtech Engineering Services</h1>
+  <h1>AECtech Engineering Services</h1>
   <nav>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#home">Home</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<main>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a leading civil engineering company specializing in structural design, construction, and consultancy services. With years of experience, we are committed to delivering high-quality solutions that exceed client expectations.</p>
-  </section>
+<section class="hero">
+  <h2>Building the Future, Today</h2>
+  <p>Top-notch Civil Engineering Solutions for Structures that Last Generations</p>
+  <button onclick="window.location.href='contact.html'">Request a Quote</button>
+</section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>Structural Design | General Construction | Soil Testing | Project Management | Surveying</p>
-    <button onclick="window.location.href='#contact'">Get In Touch</button>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <button onclick="window.location.href='mailto:kinggozec1@gmail.com'">Contact Us</button>
-  </section>
-</main>
+<section class="features">
+  <div class="feature-card">
+    <h3>Structural Design</h3>
+    <p>We create safe, efficient, and economical structural designs for all kinds of projects.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Soil Testing</h3>
+    <p>Our geotechnical team ensures the strength and reliability of your construction foundation.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Surveying</h3>
+    <p>Precision land surveying services for planning and successful project execution.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Project Management</h3>
+    <p>Professional project handling to deliver on-time and on-budget with high quality standards.</p>
+  </div>
+</section>
 
 <footer>
   &copy; 2025 AECtech Engineering Services. All rights reserved.

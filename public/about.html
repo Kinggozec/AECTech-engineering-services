@@ -4,35 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - AECtech Engineering Services</title>
-  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- External CSS and Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Internal CSS -->
   <style>
-    /* Standardize all images for projects */
-    .img-small {
-      width: 100%; /* Make images responsive */
-      max-width: 600px;
-      height: auto;
-      object-fit: cover;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
     }
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
+      background-color: #6a0dad;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 15px;
     }
     nav ul li a {
+      color: white;
       text-decoration: none;
-      color: #333;
       font-weight: bold;
+      transition: color 0.3s;
     }
-
-    /* Grid for project images */
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+    nav ul li a:hover {
+      color: #9b30ff;
+    }
+    .hero {
+      background: linear-gradient(rgba(106,13,173,0.7), rgba(106,13,173,0.7)), url('https://images.unsplash.com/photo-1581090700227-1e8a63d7ef45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero .btn-primary {
+      background-color: #9b30ff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .hero .btn-primary:hover {
+      background-color: #7b1fa2;
+    }
+    .features, .projects, .slogan, .contact {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .features h2, .projects h2, .slogan h2, .contact h2, #about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6a0dad;
+    }
+    footer {
+      background-color: #6a0dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -46,71 +104,82 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero text-center text-white d-flex align-items-center justify-content-center">
+  <section class="hero">
     <h1>Welcome to AECtech Engineering Services</h1>
-  </header>
+    <p>Building Excellence, Innovating the Future</p>
+    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="container my-5">
     <h2>About Us</h2>
-    <img src="images/about-us.jpg" alt="About Us" class="img-small">
-    <h3>AECtech Engineering Services is a leading civil engineering firm based in Nigeria, specializing in delivering high-quality projects and innovative solutions.</h3>
-    <h3>Founded in 2025, we have built a reputation for excellence in the construction industry.</h3>
-    <h3>Our team of experienced engineers and project managers are dedicated to providing the best service to our clients.</h3>
-    <h3>We are committed to safety, quality, and sustainability in all our projects.</h3>
-    <h3>With a focus on innovation and technology, we strive to exceed our clients' expectations.</h3>
-    <h3>Our mission is to deliver exceptional engineering solutions that enhance the built environment.</h3>
-    <h3>We believe in building strong relationships with our clients, partners, and communities.</h3>
-    <h3>We specialize in structural design, construction, consultancy, surveying, soil testing, and project management.</h3>
+    <p class="text-center">AECtech Engineering Services is a leading civil engineering firm based in Nigeria, specializing in delivering high-quality projects and innovative solutions.</p>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="container my-5">
+  <section id="services" class="features">
     <h2>Our Services</h2>
-    <ul>
-      <li>Structural Design & Analysis</li>
-      <li>General Construction</li>
-      <li>Consultancy</li>
-      <li>Surveying</li>
-      <li>Soil Testing</li>
-      <li>Project Management</li>
-    </ul>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="container my-5">
-    <h2>Our Projects</h2>
-    <div class="project-gallery">
-      <img src="images/our project_1.jpg" alt="Project 1" class="img-small">
-      <img src="images/our project_2.jpg" alt="Project 2" class="img-small">
-      <img src="images/our project_3.jpg" alt="Project 3" class="img-small">
-      <img src="images/our project_4.jpg" alt="Project 4" class="img-small">
-      <img src="images/our project_5.jpg" alt="Project 5" class="img-small">
-      <img src="images/our project_6.jpg" alt="Project 6" class="img-small">
-      <img src="images/our project_7.jpg" alt="Project 7" class="img-small">
-      <img src="images/our project_8.jpg" alt="Project 8" class="img-small">
-      <img src="images/our project_9.jpg" alt="Project 9" class="img-small">
-      <img src="images/our project_10.jpg" alt="Project 10" class="img-small">
-      <img src="images/our project_11.jpg" alt="Project 11" class="img-small">
-      <img src="images/our project_12.jpg" alt="Project 12" class="img-small">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="fas fa-drafting-compass fa-2x mb-3"></i>
+        <h4>Structural Design</h4>
+        <p>Strong, reliable designs with modern technology.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-hard-hat fa-2x mb-3"></i>
+        <h4>Construction</h4>
+        <p>Delivering top-quality infrastructure and buildings.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-tasks fa-2x mb-3"></i>
+        <h4>Project Management</h4>
+        <p>Efficient planning and smooth execution.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <img src="images/our project_1.jpg" alt="Project 1" class="img-small">
+    <img src="images/our project_2.jpg" alt="Project 2" class="img-small">
+    <img src="images/our project_3.jpg" alt="Project 3" class="img-small">
+    <img src="images/our project_4.jpg" alt="Project 4" class="img-small">
+    <img src="images/our project_5.jpg" alt="Project 5" class="img-small">
+    <img src="images/our project_6.jpg" alt="Project 6" class="img-small">
+    <img src="images/our project_7.jpg" alt="Project 7" class="img-small">
+    <img src="images/our project_8.jpg" alt="Project 8" class="img-small">
+    <img src="images/our project_9.jpg" alt="Project 9" class="img-small">
+    <img src="images/our project_10.jpg" alt="Project 10" class="img-small">
+    <img src="images/our project_11.jpg" alt="Project 11" class="img-small">
+    <img src="images/our project_12.jpg" alt="Project 12" class="img-small">
+    <img src="images/our project_13.jpg" alt="Project 13" class="img-small">
+    <img src="images/our project_14.jpg" alt="Project 14" class="img-small">
+    <img src="images/our project_15.jpg" alt="Project 15" class="img-small">
+    <img src="images/our project_16.jpg" alt="Project 16" class="img-small">
+    <img src="images/our project_17.jpg" alt="Project 17" class="img-small">
+
+    <h1>Transforming Ideas into Reality</h1>
+    <p class="text-center">From residential to industrial projects, we transform ideas into reality.</p>
+  </section>
+
+  <!-- Slogan Section -->
+  <section id="slogan" class="slogan">
+    <h2>Our Slogan</h2>
+    <p class="text-center">Where structural integrity meets innovation.</p>
+  </section>
+
   <!-- Contact Section -->
-  <section id="contact" class="container my-5">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Email: kinggozec1@gmail.com | Phone: 09076982397</p>
+    <p class="text-center">Email: kinggozec1@gmail.com | Phone: 09076982397</p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-center text-white py-3">
+  <footer>
     &copy; 2025 AECtech Engineering Services. All Rights Reserved.
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<!-- Compare this snippet from public/index.html: -->
-<link rel="stylesheet" href="css/styles.css"> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
